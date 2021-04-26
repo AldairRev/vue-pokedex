@@ -1,0 +1,13 @@
+.pokemons-list {
+    width: $responsive-width;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @media screen and (max-height: #{$responsive-width}) {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

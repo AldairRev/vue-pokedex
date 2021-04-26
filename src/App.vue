@@ -1,15 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <CardList :apiUrl="apiUrl"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CardList from './components/CardList.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    CardList
+  },
+  data() {
+    return {
+      apiUrl: 'https://pokeapi.co/api/v2/pokemon/',
+    }
   }
 }
 </script>
