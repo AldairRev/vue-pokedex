@@ -1,14 +1,22 @@
 <template>
-  <CardList :apiUrl="apiUrl"/>
+  <div class="page">
+    <div
+      class="page__pattern"
+      :style="{ backgroundImage: 'url(./assets/pokeball-pattern.svg)'}"
+    >
+      <PokemonsList :apiUrl="apiUrl"/>
+    </div>
+  </div>
+  
 </template>
 
 <script>
-import CardList from './components/CardList.vue';
+import PokemonsList from './components/PokemonsList.vue';
 
 export default {
   name: 'App',
   components: {
-    CardList
+    PokemonsList
   },
   data() {
     return {

@@ -1,6 +1,6 @@
 <template>
     <div class="pokemons-list">
-        <BaseCard
+        <PokemonCard
             v-for="(pokemon, index) in pokemons"
             :key="index"
             :pokemon="pokemon"
@@ -13,14 +13,14 @@
 </template>
 
 <script>
-import BaseCard from './BaseCard.vue';
+import PokemonCard from './PokemonCard.vue';
 
 import axios from 'axios';
 
 export default {
-    name: 'CardList',
+    name: 'PokemonsList',
     components: {
-        BaseCard
+        PokemonCard
     },
     props: {
         apiUrl: {
